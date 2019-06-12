@@ -1,5 +1,6 @@
 package variables;
 import static java.lang.Math.*;
+import java.util.Scanner;
 public class FormulaExample {
     public static void main(String[] args) {
 
@@ -54,7 +55,22 @@ public class FormulaExample {
         double seconds = minutes * 60;
         System.out.printf("You live %f years, %f weeks, %f days, %f hours, %f minutes, %f seconds",years,weeks,days,hours,minutes,seconds);
 
-        
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Please enter the correct answers: %n");
+        float correctAnswer = sc.nextFloat();
+        System.out.println("Please enter the amount of answers: %n");
+        float totalAmount = sc.nextFloat();
+        float finalScore = (correctAnswer/totalAmount) * 100;
+        System.out.println("Your final score is: " + finalScore + "%");
+
+        float AnswerA = 23;
+        float WrongB = 45;
+        float totalScore = Math.round(AnswerA - (WrongB/4));
+        System.out.println("Your total score is: " + totalScore + "%");
+
+
+
 
 
 
